@@ -1,9 +1,6 @@
 let API_URL = 'https://geo.ipify.org/api/v2/country,city?'
 let API_KEY = 'at_j9biQqdwAJEvgfpG1vCprYNCEZ5BQ'
 
-console.log(API_KEY)
-
-
 let map = L.map('map', {
     zoomControl: false,
     attributionControl: false,
