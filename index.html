@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <title>IP Address Tracker</title>
+</head>
+
+<body class="h-screen font-rubik">
+  <main class="">
+    <div class="min-h-[38svh] bg-mobile-pattern md:bg-desktop-pattern bg-cover bg-no-repeat"></div>
+
+    <div
+      class="w-full absolute top-0 left-0 z-10 flex flex-col items-center gap-[1rem] md:gap-[2rem] pt-[1.5rem] px-[2rem]">
+      <h1 class="text-2xl md:text-3xl text-white font-medium">IP Address Tracker</h1>
+
+      <!-- input field for IP address or domain goes here  -->
+      <div class="w-full md:w-[40%] flex">
+        <input id="userInput"
+          class="w-full outline-none rounded-l-2xl text-very-dark-gray text-[1.25rem] placeholder:text-dark-gray cursor-pointer placeholder:text-[1rem] md:placeholder:text-[1.25rem] py-4 px-6"
+          type="text" placeholder="Search for any IP address" autocomplete="off" />
+        <div id="enterBtn"
+          class="flex justify-center items-center rounded-r-2xl bg-black cursor-pointer hover:bg-very-dark-gray py-4 px-6">
+          <img src="./images/icon-arrow.svg" alt="Arrow Icon">
+        </div>
+      </div>
+
+      <!-- result from API goes here  -->
+      <div
+        class="w-full md:w-[80%] flex flex-col md:grid md:grid-cols-4  gap-3 md:gap-[6rem] rounded-2xl bg-white p-4 md:px-10 md:py-8 mt-2 md:mt-4">
+        <!-- ip address goes here  -->
+        <div class="flex flex-col items-center md:items-start md:gap-2">
+          <h3 class="text-dark-gray text-[0.65rem] md:text-xs tracking-[1.4px] font-bold uppercase">ip address</h3>
+          <span id="ipAddressText"
+            class="text-very-dark-gray font-medium text-[1.25rem] md:text-[1.75rem]"></span>
+        </div>
+
+        <!-- location result goes here  -->
+        <div class="md:vertical-line flex flex-col items-center md:items-start md:gap-2">
+          <h3 class="text-dark-gray text-[0.65rem] md:text-xs tracking-[1.4px] font-bold uppercase">location</h3>
+          <span id="locationText"
+            class="text-very-dark-gray font-medium text-center md:text-left text-[1.25rem] md:text-[1.75rem]"></span>
+        </div>
+
+        <!-- timezone result goes here  -->
+        <div class="md:vertical-line flex flex-col items-center md:items-start md:gap-2">
+          <h3 class="text-dark-gray text-[0.65rem] md:text-xs tracking-[1.4px] font-bold uppercase">timezone</h3>
+          <span id="timezoneText"
+            class="text-very-dark-gray font-medium text-[1.25rem] md:text-[1.75rem]"></span>
+        </div>
+
+        <!-- ISP result goes here  -->
+        <div class="md:vertical-line flex flex-col items-center md:items-start md:gap-2">
+          <h3 class="text-dark-gray text-[0.65rem] md:text-xs tracking-[1.4px] font-bold uppercase">isp</h3>
+          <span id="ispText" class="text-very-dark-gray font-medium text-center md:text-left text-[1.25rem] md:text-[1.75rem]"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="map"></div>
+  </main>
+
+  <!-- <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Supath Shrestha</a>.
+    </div>
+  </footer> -->
+
+  <script src="script.js"></script>
+</body>
+
+</html>
