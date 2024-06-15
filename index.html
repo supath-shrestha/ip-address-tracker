@@ -8,8 +8,12 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <!-- <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script> -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <title>IP Address Tracker</title>
 </head>
 
@@ -38,8 +42,7 @@
         <!-- ip address goes here  -->
         <div class="flex flex-col items-center md:items-start md:gap-2">
           <h3 class="text-dark-gray text-[0.65rem] md:text-xs tracking-[1.4px] font-bold uppercase">ip address</h3>
-          <span id="ipAddressText"
-            class="text-very-dark-gray font-medium text-[1.25rem] md:text-[1.75rem]"></span>
+          <span id="ipAddressText" class="text-very-dark-gray font-medium text-[1.25rem] md:text-[1.75rem]"></span>
         </div>
 
         <!-- location result goes here  -->
@@ -52,14 +55,14 @@
         <!-- timezone result goes here  -->
         <div class="md:vertical-line flex flex-col items-center md:items-start md:gap-2">
           <h3 class="text-dark-gray text-[0.65rem] md:text-xs tracking-[1.4px] font-bold uppercase">timezone</h3>
-          <span id="timezoneText"
-            class="text-very-dark-gray font-medium text-[1.25rem] md:text-[1.75rem]"></span>
+          <span id="timezoneText" class="text-very-dark-gray font-medium text-[1.25rem] md:text-[1.75rem]"></span>
         </div>
 
         <!-- ISP result goes here  -->
         <div class="md:vertical-line flex flex-col items-center md:items-start md:gap-2">
           <h3 class="text-dark-gray text-[0.65rem] md:text-xs tracking-[1.4px] font-bold uppercase">isp</h3>
-          <span id="ispText" class="text-very-dark-gray font-medium text-center md:text-left text-[1.25rem] md:text-[1.75rem]"></span>
+          <span id="ispText"
+            class="text-very-dark-gray font-medium text-center md:text-left text-[1.25rem] md:text-[1.75rem]"></span>
         </div>
       </div>
     </div>
@@ -75,6 +78,7 @@
   </footer> -->
 
   <script src="script.js"></script>
+
 </body>
 
 </html>
